@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/util
+          http://www.springframework.org/schema/util/spring-util.xsd">
+
+<context:component-scan base-package="com._05.collection.injection"/>
+    <util:list id="myAnnotationList" list-class="java.util.ArrayList">
+        <value>test list1</value>
+        <value>test list2</value>
+    </util:list>
+
+    <util:list id="myAnnotationPersonList" list-class="java.util.ArrayList">
+        <bean id="personId1" class="com._05.collection.injection.Person">
+            <property name="name" value="Zuleyha"/>
+            <property name="surname" value="Kaya"/>
+
+        </bean>
+        <bean id="personId2" class="com._05.collection.injection.Person">
+            <property name="name" value="Zeliha"/>
+            <property name="surname" value="Kaya"/>
+
+        </bean>
+    </util:list>
+    <util:set  id="myAnnotationSet">
+        <value>10</value>
+        <value>20</value>
+    </util:set>
+    <util:map id="myAnnotationMap">
+       <entry key="keyMap1">
+           <value>KeyMapValueeee</value>
+       </entry>
+
+        <entry key="keyMap2">
+            <value>KeyMapValueeee2</value>
+        </entry>
+    </util:map>
+    <util:properties  id="myAnnotationProperties">
+        <prop key="propkey1">PropValuee1</prop>
+        <prop key="propkey2">PropValuee2</prop>
+    </util:properties>
+
+
+</beans>

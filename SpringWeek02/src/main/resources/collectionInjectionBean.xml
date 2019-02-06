@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="CollInjBean" class="com._05.collection.injection.CollectionInjectionData">
+<property name="nameList">
+    <list>
+        <value>Zuleyha</value>
+        <value>Iskender</value>
+        <value>Ayse</value>
+        <value>Emine</value>
+        <value>Derya</value>
+    </list>
+</property>
+</bean>
+</beans>

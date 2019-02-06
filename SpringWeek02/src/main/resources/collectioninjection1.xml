@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="collectionInjection1" class="com._05.collection.injection.CollectionInjection1">
+    <property name="myList">
+        <list> <value>Derya</value>
+              <value>Abdullah</value>
+              <value>Burak</value>
+        </list>
+    </property>
+    <property name="myList2">
+        <list>
+            <ref bean="personId1"/>
+            <bean id="pId2" class="com._05.collection.injection.Person">
+                <property name="name" value="Emine"/>
+                <property name="surname" value="Cem"/>
+            </bean>
+            <bean id="pId3" class="com._05.collection.injection.Person">
+                <property name="name" value="Ayse"/>
+                <property name="surname" value="Volkan"/>
+            </bean>
+        </list>
+    </property>
+
+    <property name="myMap">
+        <map>
+            <entry key="key1">
+                <value>Havva Kaya</value>
+            </entry>
+            <entry key="key2">
+                <value>Mustafa Kaya</value>
+            </entry>
+            <entry key="key3>">
+                <value>Derya Celen</value>
+            </entry>
+            <entry key="key4">
+                <value>Emine Kayis</value>
+            </entry>
+            <entry key="key5">
+                <value>Ayse Karadeniz</value>
+            </entry>
+            <entry key="key6">
+                <value>Iskender Kaya</value>
+            </entry>
+            <entry key="key7">
+                <value>Zuleyha Kaya</value>
+            </entry>
+        </map>
+    </property>
+    <property name="mySet">
+        <set>
+            <value>10</value>
+            <value>20</value>
+            <value>30</value>
+            <value>40</value>
+            <value>50</value>
+        </set>
+    </property>
+   <property name="myProperties">
+       <props>
+           <prop key="prop1">propvalue1</prop>
+           <prop key="prop2">propvalue2</prop>
+           <prop key="prop3">propvalue3</prop>
+       </props>
+   </property>
+
+</bean>
+    <bean id="personId1" class="com._05.collection.injection.Person">
+        <property name="name" value="test name" />
+        <property name="surname" value="test surname" />
+    </bean>
+</beans>
